@@ -1,0 +1,45 @@
+// Variables and mixins
+@import "variables";
+
+/*! Slides.css v#{$version} | MIT License | github.com/picturepan2/slides.css */
+.slides {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+
+  .slide {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+
+    .slide-content {
+      display: none;
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+    }
+
+    .slide-locator {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+
+      &:checked + .slide-content {
+        display: block;
+      }
+    }
+  }
+
+  .slide-1 {
+    .slide-content {
+      background: #efefef;
+    }
+  }
+
+  .slide-2 {
+    .slide-content {
+      background: #333;
+    }
+  }
+}
