@@ -28,7 +28,8 @@
     "gulp-clean-css": "latest",
     "gulp-csscomb": "latest",
     "gulp-rename": "latest",
-    "gulp-sass": "latest"
+    "gulp-sass": "latest",
+    "gulp-pug": "latest"
   },
   "browserslist": [
     "last 4 Chrome versions",

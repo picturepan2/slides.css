@@ -4,9 +4,11 @@ var cleancss = require('gulp-clean-css');
 var csscomb = require('gulp-csscomb');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
+var pug = require('gulp-pug');
 
 gulp.task('watch', function() {
   gulp.watch('./**/*.scss', ['build']);
+  gulp.watch('./**/*.pug', ['docs']);
 });
 
 gulp.task('build', function() {
@@ -22,6 +24,14 @@ gulp.task('build', function() {
       suffix: '.min'
     }))
     .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('docs', function() {
+  gulp.src('./markdown/!(_)*.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('default', ['build']);

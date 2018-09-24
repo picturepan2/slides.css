@@ -1,0 +1,23 @@
+extends _layout.pug
+
+block content
+  .slides
+    .slide
+      input.slide-locator(id="slide-1" type="radio" name="locator" checked autofocus)
+      label.slide-content.bg-grey(for="slide-2")
+        h1.text-dark 1
+    
+    .slide
+      input.slide-locator(id="slide-2" type="radio" name="locator")
+      label.slide-content.bg-dark(for="slide-3")
+        h1.text-light 2
+
+    .slide
+      input.slide-locator(id="slide-3" type="radio" name="locator")
+      label.slide-content.bg-dark(for="slide-4")
+        h1.text-light 3
+
+    .slide
+      input.slide-locator(id="slide-0" type="radio" name="locator")
+      label.slide-content.bg-grey(for="slide-0")
+        h1.text-dark END
